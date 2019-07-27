@@ -2,9 +2,12 @@
   width: 100%;
   font-size: 2rem;
   position: fixed;
-  top: 0;
+  top: -300px;
   left: 0;
   background-color: var(--secondery-color);
+  box-shadow: 0 1rem 2rem rgba(0,0,0, .2);
+  animation: getDown 1.4s .5s forwards;
+  z-index: 9999;
   &__wrapper {
     display: flex;
     align-items: center;
@@ -29,6 +32,9 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
     &--input {
       font-size: 1.6rem;
       border: none;
@@ -45,5 +51,14 @@
       font-size: 1.7rem;
       box-shadow: 0 0 3rem rgba(255,255,255, .5);
     }
+    &--spinner {
+      width: 2rem;
+      margin-top: 2rem;
+    }
   }
+}
+
+@keyframes getDown {
+  0% {top: -300px}
+  100% {top: 0}
 }

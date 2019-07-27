@@ -7,6 +7,7 @@
 
       <div class="navbar__search">
           <input #serachIpnut class="navbar__search--input" type="text" placeholder="Search For Images">
+          <img *ngIf="isLoading" class="navbar__search--spinner" src="../../assets/spinner2.gif" alt="spinner">
       </div>
     </div>
 </header>

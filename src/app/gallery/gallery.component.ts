@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {AppService} from '../app.service';
-import {NgxSpinnerService} from 'ngx-spinner';
 
 @Component({
   selector: 'app-gallery',
@@ -11,18 +10,22 @@ export class GalleryComponent implements OnInit {
   photos: any[];
   validGallery = false;
 
-  constructor(private appService: AppService,) {
-  }
+  constructor(private appService: AppService) {}
 
   ngOnInit() {
     this.appService.photos.subscribe(photos => {
-        this.photos = photos['photo'];
-        console.log(this.photos);
-        this.validGallery = true;
-      },
-      err => {
+        console.log(photos);
+        if (parseInt(photos['total']) > 0) {
+          this.photos = photos['photo'];
+          this.validGallery = true;
+        } else {
           this.photos = [];
           this.validGallery = false;
+        }
+      },
+      err => {
+        this.photos = [];
+        this.validGallery = false;
       });
   }
 

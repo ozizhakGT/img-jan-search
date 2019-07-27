@@ -1,9 +1,14 @@
 <!--"https://farm" + key.farm + ".staticflickr.com/" + key.server + "/" + key.id + "_" + key.secret + ".jpg";-->
-<main class="gallery">
-  <ngx-spinner></ngx-spinner>
-  <div class="gallery__wrapper" *ngIf="validGallery">
-    <div class="gallery__photo" *ngFor="let photo of photos">
+<main class="gallery" [ngStyle]="{'height': validGallery ? 'auto' : '100%'}">
+  <div class="gallery__wrapper" *ngIf="validGallery; else noPhotos">
+    <div class="gallery__photo" *ngFor="let photo of photos | slice: 0:15">
       <img src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg" alt="{{photo.title}}">
     </div>
   </div>
+  <ng-template #noPhotos>
+    <div class="gallery__no-photos">
+      <p>What are you waiting for?! Let's find Photos</p>
+      <img src="../../assets/cool-smile.jpg" alt="">
+    </div>
+  </ng-template>
 </main>
