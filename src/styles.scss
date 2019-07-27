@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css?family=Muli:400,700,800&display=swap');
+
+:root {
+  --primary-color: #D4DFE6;
+  --secondery-color: #8EC0E4;
+  --third-color: #CADBE9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Muli", sans-serif;
+}
+html, body {
+  height: 100%;
+}

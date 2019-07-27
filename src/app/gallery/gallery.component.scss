@@ -1,0 +1,27 @@
+.gallery {
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+
+  display: flex;
+  justify-content: center;
+  &__wrapper {
+    margin: 15rem auto;
+    width: 90%;
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  &__photo {
+    width: 30rem;
+    height: 30rem;
+    padding: 1rem;
+    border-radius: 8px;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 7px;
+    }
+  }
+}

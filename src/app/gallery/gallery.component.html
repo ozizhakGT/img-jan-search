@@ -1,0 +1,9 @@
+<!--"https://farm" + key.farm + ".staticflickr.com/" + key.server + "/" + key.id + "_" + key.secret + ".jpg";-->
+<main class="gallery">
+  <ngx-spinner></ngx-spinner>
+  <div class="gallery__wrapper" *ngIf="validGallery">
+    <div class="gallery__photo" *ngFor="let photo of photos">
+      <img src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg" alt="{{photo.title}}">
+    </div>
+  </div>
+</main>
