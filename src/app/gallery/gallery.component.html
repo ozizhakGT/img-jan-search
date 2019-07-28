@@ -1,7 +1,11 @@
 <!--"https://farm" + key.farm + ".staticflickr.com/" + key.server + "/" + key.id + "_" + key.secret + ".jpg";-->
 <main class="gallery" [ngStyle]="{'height': validGallery ? 'auto' : '100%'}">
   <div class="gallery__wrapper" *ngIf="validGallery; else noPhotos">
-    <div class="gallery__photo" *ngFor="let photo of photos | slice: 0:15">
+    <div class="gallery__photo" *ngFor="let photo of firstPhotos"
+         infiniteScroll
+         [infiniteScrollDistance]="20"
+         [infiniteScrollThrottle]="1800"
+         (scrolled)="onScroll()">
       <img src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg" alt="{{photo.title}}">
     </div>
   </div>

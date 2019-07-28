@@ -19,3 +19,36 @@ html {
 html, body {
   height: 100%;
 }
+
+// NOTIFICATION DESIGN
+
+.cdk-overlay-container {
+  z-index: 99999999;
+  text-align: center;
+}
+
+.mat-simple-snackbar span {
+  font-size: 1.6rem;
+}
+.success {
+  background: #04a84f;
+}
+.failed {
+  background: #cd3301;
+}
+.info {
+  background: #00b0ff;
+}
+
+// Global Animation
+@keyframes fadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+// GLOBAL MEDIA QUERIS
+@media only screen and (max-width: 900px) {
+  html {
+    font-size: 55%;
+  }
+}

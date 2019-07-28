@@ -1,9 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {GalleryComponent} from './gallery/gallery.component';
+import {NavbarComponent} from './navbar/navbar.component';
 
 const routes: Routes = [
-  {path: ':driver', component: GalleryComponent, pathMatch: 'full'}
+  {path: '', component: NavbarComponent},
+  {path: ':photo', component: GalleryComponent}
 ];
 
 @NgModule({
