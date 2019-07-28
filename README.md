@@ -1,6 +1,9 @@
 # ImgJanSearch
-### first step 
+### First Step 
+navigate to root folder
+##
+### Second Step
 npm install
 ##
-### second step
+### Third Step
 npm start (will open browser automatically)
