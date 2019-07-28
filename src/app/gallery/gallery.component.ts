@@ -11,7 +11,6 @@ export class GalleryComponent implements OnInit {
   photos: any[];
   firstPhotos: any[];
   validGallery = false;
-  query: string;
 
   constructor(private appService: AppService, private route: ActivatedRoute) {
   }

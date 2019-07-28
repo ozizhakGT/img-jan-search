@@ -6,7 +6,8 @@
          [infiniteScrollDistance]="20"
          [infiniteScrollThrottle]="1800"
          (scrolled)="onScroll()">
-      <img src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg" alt="{{photo.title}}">
+      <img src="https://farm{{photo.farm}}.staticflickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg"
+           alt="{{photo.title}}">
     </div>
   </div>
   <ng-template #noPhotos>
